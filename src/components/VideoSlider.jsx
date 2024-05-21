@@ -56,9 +56,11 @@ const VideoSlider = () => {
             src={bottle1}
             alt="Description"
           />
-          <h3 className="text-2xl font-bold mb-2">Your Heading</h3>
-          <span className="text-lg mb-4">Your description or subtitle</span>
-          <button className="bg-white border border-black text-black py-1 px-4">
+          <h3 className="text-2xl font-bold mb-2 lg:text-[30px]">
+            Paper Carton
+          </h3>
+          <span className="text-lg mb-4">16 fl oz / 474ml</span>
+          <button className="bg-white border border-black text-black py-1 px-4 lg:text-[20px]">
             Get A Quote
           </button>
         </div>
@@ -75,14 +77,16 @@ const VideoSlider = () => {
             src={bottle2}
             alt="Description"
           />
-          <h3 className="text-2xl font-bold mb-2">Your Heading</h3>
-          <span className="text-lg mb-4">Your description or subtitle</span>
-          <button className="bg-white border border-black text-black py-2 px-4">
-            Get A Quote
+          <h3 className="text-2xl font-bold mb-2 lg:text-[30px]">
+          Alumi-Tec Bottle
+          </h3>
+          <span className="text-lg mb-4">16.9 fl oz / 500ml</span>
+          <button className="bg-white border border-black text-black py-2 px-4 lg:text-[20px]">
+          Get A Quote
           </button>
         </div>
       </div>
-        <h1>Discover the success stories of our satisfied clients.</h1>
+      <h1>Discover the success stories of our satisfied clients.</h1>
       <Slider {...settings}>
         {slides.map((slide, index) => (
           <div
