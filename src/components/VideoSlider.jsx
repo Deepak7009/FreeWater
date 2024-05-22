@@ -92,6 +92,7 @@ const VideoSlider = () => {
           </div>
         </div>
         <div className=" max-w-[980px] mx-auto pt-[70px]">
+
           <h1 className=" py-4 font-bold text-4xl">
             Discover the success stories of our satisfied clients.
           </h1>
@@ -101,6 +102,7 @@ const VideoSlider = () => {
                 key={index}
                 className="!flex !md:flex-row flex-wrap  w-full  md:justify-start justify-center  "
               >
+
                 <div className="md:w-1/2 flex items-center justify-center">
                   <div className="border-[3px] border-blue-400 rounded-[20px] p-8">
                     <h3 className="text-2xl font-bold mb-2">{slide.title}</h3>

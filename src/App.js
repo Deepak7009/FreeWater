@@ -7,20 +7,25 @@ import Accordion from "./components/Accordion";
 import HallFame from "./components/HallFame";
 import ContactUs from "./components/ContactUs";
 import Footer from "./components/Footer";
+import DistributeHome from "./components/DistributeHome";
+import DistributeSecond from "./components/DistributeSecond";
+import DistributeInfo from "./components/DistributeInfo";
 
 function App() {
   return (
     <>
       <Navbar />
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/contact-us" element={<ContactUs />}></Route>
         <Route path="/hall-of-fame" element={<HallFame />}></Route>
         <Route path="/faq" element={<Accordion />}></Route>
         <Route path="/advertise" element={<Advertise />}></Route>
-      </Routes>
+      </Routes> */}
+      <DistributeHome />
+      <DistributeSecond />
+      <DistributeInfo/>
       <Footer />
-
     </>
   );
 }
