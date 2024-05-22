@@ -3,10 +3,12 @@ import "./App.css";
 import Advertise from "./components/Advertise";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
+import Accordion from "./components/Accordion";
 
 function App() {
   return (
     <>
+    <Accordion/>
       {/* <Navbar /> */}
       <Routes>
         <Route
