@@ -8,7 +8,7 @@ const GetQuote = () => {
         <form className="bg-white p-6 rounded-lg shadow-md w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             <div>
-              <label htmlFor="firstName" className="block mb-1 text-lg">
+              <label htmlFor="firstName" className="block mb-1 text-lg font-bold">
                 First Name
               </label>
               <input
@@ -19,7 +19,7 @@ const GetQuote = () => {
               />
             </div>
             <div>
-              <label htmlFor="lastName" className="block mb-1 text-lg">
+              <label htmlFor="lastName" className="block mb-1 text-lg font-bold">
                 Last Name
               </label>
               <input
@@ -31,7 +31,7 @@ const GetQuote = () => {
             </div>
           </div>
           <div className="mb-4">
-            <label htmlFor="email" className="block mb-1 text-lg">
+            <label htmlFor="email" className="block mb-1 text-lg font-bold">
               Email
             </label>
             <input
@@ -42,7 +42,7 @@ const GetQuote = () => {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="phone" className="block mb-1 text-lg">
+            <label htmlFor="phone" className="block mb-1 text-lg font-bold">
               Phone Number
             </label>
             <input
@@ -53,7 +53,7 @@ const GetQuote = () => {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="company" className="block mb-1 text-lg">
+            <label htmlFor="company" className="block mb-1 text-lg font-bold">
               Company Name
             </label>
             <input
@@ -64,7 +64,7 @@ const GetQuote = () => {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="businessType" className="block mb-1 text-lg">
+            <label htmlFor="businessType" className="block mb-1 text-lg font-bold">
               Type of Business
             </label>
             <input
@@ -75,7 +75,7 @@ const GetQuote = () => {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="advertising" className="block mb-1 text-lg">
+            <label htmlFor="advertising" className="block mb-1 text-lg font-bold">
               What do you want to advertise?
             </label>
             <input
@@ -86,7 +86,7 @@ const GetQuote = () => {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="budget" className="block mb-1 text-lg">
+            <label htmlFor="budget" className="block mb-1 text-lg font-bold">
               What is your budget?
             </label>
             <input
@@ -97,7 +97,7 @@ const GetQuote = () => {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="message" className="block mb-1 text-lg">
+            <label htmlFor="message" className="block mb-1 text-lg font-bold">
               Message
             </label>
             <textarea
@@ -113,7 +113,7 @@ const GetQuote = () => {
               name="recaptcha"
               className="form-checkbox border-2 border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md"
             />
-            <label htmlFor="recaptcha" className="ml-2 text-lg">
+            <label htmlFor="recaptcha" className="ml-2 text-lg font-bold">
               I'm not a robot
             </label>
           </div>
