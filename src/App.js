@@ -5,48 +5,19 @@ import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Accordion from "./components/Accordion";
 import HallFame from "./components/HallFame";
+import ContactUs from "./components/ContactUs";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
+      <Navbar />
       <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Navbar />
-              <Home />
-            </>
-          }
-        />
-        <Route
-          path="/advertise"
-          element={
-            <>
-              <Navbar />
-              <Advertise />
-            </>
-          }
-        />
-        <Route
-          path="/hall-of-fame"
-          element={
-            <>
-              <Navbar />
-              <HallFame />
-            </>
-          }
-        />
-        <Route
-          path="/faq"
-          element={
-            <>
-              <Navbar />
-              <Accordion />
-            </>
-          }
-        />
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/contact-us" element={<ContactUs />}></Route>
       </Routes>
+      <Footer />
+
     </>
   );
 }
