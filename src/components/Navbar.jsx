@@ -1,9 +1,15 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "./navbar.css"; //
+import { Link, useLocation } from "react-router-dom";
+import "./navbar.css";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+
+  const linkClasses = (path) =>
+    location.pathname === path
+      ? "text-white block px-3 py-2 rounded-md bg-gray-700"
+      : "text-white block px-3 py-2 rounded-md hover:bg-gray-700";
 
   return (
     <nav className="bg-gray-800 p-4">
@@ -25,7 +31,11 @@ const Navbar = () => {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
-                d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+                d={
+                  isOpen
+                    ? "M6 18L18 6M6 6l12 12"
+                    : "M4 6h16M4 12h16M4 18h16"
+                }
               ></path>
             </svg>
           </button>
@@ -39,7 +49,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/"
-                className="text-white block px-3 py-2 rounded-md hover:bg-gray-700"
+                className={linkClasses("/")}
                 onClick={() => setIsOpen(false)}
               >
                 Home
@@ -48,7 +58,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/advertise"
-                className="text-white block px-3 py-2 rounded-md hover:bg-gray-700"
+                className={linkClasses("/advertise")}
                 onClick={() => setIsOpen(false)}
               >
                 Advertise
@@ -57,7 +67,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/distribute"
-                className="text-white block px-3 py-2 rounded-md hover:bg-gray-700"
+                className={linkClasses("/distribute")}
                 onClick={() => setIsOpen(false)}
               >
                 Distribute
@@ -66,7 +76,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/hall-of-fame"
-                className="text-white block px-3 py-2 rounded-md hover:bg-gray-700"
+                className={linkClasses("/hall-of-fame")}
                 onClick={() => setIsOpen(false)}
               >
                 Hall of Fame
@@ -75,7 +85,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/faq"
-                className="text-white block px-3 py-2 rounded-md hover:bg-gray-700"
+                className={linkClasses("/faq")}
                 onClick={() => setIsOpen(false)}
               >
                 FAQ
@@ -84,7 +94,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/contact-us"
-                className="text-white block px-3 py-2 rounded-md hover:bg-gray-700"
+                className={linkClasses("/contact-us")}
                 onClick={() => setIsOpen(false)}
               >
                 Contact Us
