@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -13,7 +13,7 @@ function Subscribe() {
     return (
         <div className="flex justify-center items-center min-h-screen bg-gray-100 overflow-hidden">
             <form className="w-full max-w-[450px] bg-gray-50 p-8 shadow-lg rounded-lg" data-aos="flip-right">
-                <h2 className="text-2xl font-bold mb-6 text-center text-blue-600">Subscribe To Get Your FreeWater</h2>
+                <h2 className="text-2xl font-bold mb-6 text-center text-blue-500">Subscribe To Get Your FreeWater</h2>
                 <div className="mb-6">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="first-name">
                         First name: *
@@ -60,11 +60,13 @@ function Subscribe() {
                 </div>
                 <div className="flex items-center justify-center">
                     <button
-                        className="bg-blue-600 hover:bg-blue-700 text-white text-lg font-bold py-2 px-5 rounded focus:outline-none focus:shadow-outline transition duration-200"
+                        className="bg-blue-500 text-white text-lg font-bold py-2 px-8 rounded-full focus:outline-none focus:shadow-outline transition duration-400 bg-slide-hover"
                         type="button"
                     >
                         Send
                     </button>
+
+
                 </div>
             </form>
         </div>

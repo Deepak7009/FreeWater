@@ -21,23 +21,27 @@ const VideoSlider = () => {
   const slides = [
     {
       image: bottle1,
-      title: "Slide 1",
-      description: "Description for slide 1",
+      title:
+        " It's a really powerful tool. When they go to market with big events, like the ones we experienced with FreeWater, it was a great experience",
+      description: "Brent Foley Managing Director, Dollarzing",
     },
     {
       image: bottle1,
-      title: "Slide 2",
-      description: "Description for slide 2",
+      title:
+        "I advertised on 1/3 of the label on a pallet of aluminum water and sold a house! Now I'm on the front of 45,000 cartons of water. ",
+      description: "Hasan Yacoub, Realtor ",
     },
     {
       image: bottle1,
-      title: "Slide 3",
-      description: "Description for slide 3",
+      title:
+        "We got such large media coverage from FreeWater because it's more innovative than some of the other more traditional marketing materials. ",
+      description: "Mason King CEO, Jubilee Jobs of Lexington ",
     },
     {
       image: bottle1,
-      title: "Slide 4",
-      description: "Description for slide 4",
+      title:
+        "In terms of both brand awareness and quantifiable data, FreeWater has tremendously helped our brand reach our goals.",
+      description: "Patrick H. Matlack CCO, Mindgrasp",
     },
   ];
   return (
@@ -88,7 +92,8 @@ const VideoSlider = () => {
           </div>
         </div>
         <div className=" max-w-[980px] mx-auto pt-[70px]">
-          <h1 className=" py-4">
+
+          <h1 className=" py-4 font-bold text-4xl">
             Discover the success stories of our satisfied clients.
           </h1>
           <Slider {...settings}>
@@ -97,9 +102,12 @@ const VideoSlider = () => {
                 key={index}
                 className="!flex !md:flex-row flex-wrap  w-full  md:justify-start justify-center  "
               >
-                <div className=" md:w-1/2 ">
-                  <h3 className="text-2xl font-bold mb-2">{slide.title}</h3>
-                  <p className="text-lg mb-4">{slide.description}</p>
+
+                <div className="md:w-1/2 flex items-center justify-center">
+                  <div className="border-[3px] border-blue-400 rounded-[20px] p-8">
+                    <h3 className="text-2xl font-bold mb-2">{slide.title}</h3>
+                    <p className="text-lg mb-4">{slide.description}</p>
+                  </div>
                 </div>
                 <div className=" md:w-1/2">
                   <img
