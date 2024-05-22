@@ -9,8 +9,6 @@ import HallFame from "./components/HallFame";
 function App() {
   return (
     <>
-    <Accordion/>
-      {/* <Navbar /> */}
       <Routes>
         <Route
           path="/"
@@ -39,8 +37,16 @@ function App() {
             </>
           }
         />
+        <Route
+          path="/faq"
+          element={
+            <>
+              <Navbar />
+              <Accordion />
+            </>
+          }
+        />
       </Routes>
-      {/* <Advertise /> */}
     </>
   );
 }
