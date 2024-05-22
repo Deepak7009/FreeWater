@@ -1,9 +1,11 @@
-import React from "react";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import ContactUs from "./components/ContactUs";
+import Advertise from "./components/Advertise";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
-import {Routes, Route } from "react-router-dom";
+import Accordion from "./components/Accordion";
+import HallFame from "./components/HallFame";
+import ContactUs from "./components/ContactUs";
 import Footer from "./components/Footer";
 
 function App() {
@@ -15,6 +17,7 @@ function App() {
         <Route path="/contact-us" element={<ContactUs />}></Route>
       </Routes>
       <Footer />
+
     </>
   );
 }

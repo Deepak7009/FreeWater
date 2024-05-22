@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./navbar.css"; // Import the custom CSS file for animations
+import "./navbar.css"; //
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
