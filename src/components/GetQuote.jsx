@@ -47,7 +47,6 @@ const GetQuote = () => {
     const validationErrors = validate();
     if (Object.keys(validationErrors).length === 0) {
       console.log("Form Data Submitted: ", formData);
-      // Submit form data to the server
     } else {
       setErrors(validationErrors);
     }
