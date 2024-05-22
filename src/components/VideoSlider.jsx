@@ -78,11 +78,11 @@ const VideoSlider = () => {
             alt="Description"
           />
           <h3 className="text-2xl font-bold mb-2 lg:text-[30px]">
-          Alumi-Tec Bottle
+            Alumi-Tec Bottle
           </h3>
           <span className="text-lg mb-4">16.9 fl oz / 500ml</span>
           <button className="bg-white border border-black text-black py-2 px-4 lg:text-[20px]">
-          Get A Quote
+            Get A Quote
           </button>
         </div>
       </div>

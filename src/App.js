@@ -3,6 +3,7 @@ import "./App.css";
 import Advertise from "./components/Advertise";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
+import HallFame from "./components/HallFame";
 
 function App() {
   return (
@@ -24,6 +25,15 @@ function App() {
             <>
               <Navbar />
               <Advertise />
+            </>
+          }
+        />
+        <Route
+          path="/hall-of-fame"
+          element={
+            <>
+              <Navbar />
+              <HallFame />
             </>
           }
         />
