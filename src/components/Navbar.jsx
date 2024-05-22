@@ -21,7 +21,7 @@ const Navbar = () => {
             className="text-white focus:outline-none"
           >
             <svg
-              className="w-6 h-6"
+              className="w-6 h-6 relative z-[2]"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -43,7 +43,7 @@ const Navbar = () => {
         <div
           className={`fixed md:static inset-0 transform ${
             isOpen ? "translate-x-0" : "translate-x-full"
-          } transition-transform duration-500 ease-in-out md:transform-none md:translate-x-0 w-full md:w-auto bg-gray-800 md:bg-transparent h-full md:h-auto`}
+          } transition-transform duration-500 ease-in-out md:transform-none md:translate-x-0 w-full md:w-auto bg-gray-800 md:bg-transparent h-full md:h-auto z-[1] top-[10%]`}
         >
           <ul className="flex flex-col md:flex-row md:items-center md:space-x-4 mt-4 md:mt-0">
             <li>
