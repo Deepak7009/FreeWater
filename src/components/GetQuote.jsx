@@ -1,11 +1,13 @@
 import React, { useState } from "react";
+import axios from 'axios';
+
 
 const GetQuote = () => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
-    phone: "",
+    number: "",
     company: "",
     businessType: "",
     advertising: "",
@@ -29,7 +31,7 @@ const GetQuote = () => {
     if (!formData.firstName) newErrors.firstName = "First name is required";
     if (!formData.lastName) newErrors.lastName = "Last name is required";
     if (!formData.email) newErrors.email = "Email is required";
-    if (!formData.phone) newErrors.phone = "Phone number is required";
+    if (!formData.number) newErrors.number = "Phone number is required";
     if (!formData.company) newErrors.company = "Company name is required";
     if (!formData.businessType)
       newErrors.businessType = "Business type is required";
@@ -42,11 +44,36 @@ const GetQuote = () => {
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length === 0) {
-      console.log("Form Data Submitted: ", formData);
+      try {
+        const response = await axios.post(
+          "http://localhost:5000/contact",
+          formData
+        );
+        if (response.status === 201) {
+          // setResponseMessage("Customer added successfully!");
+          setFormData({
+            firstName: "",
+            lastName: "",
+            email: "",
+            number: "",
+            company: "",
+            businessType: "",
+            advertising: "",
+            budget: "",
+            message: "",
+            recaptcha: false,
+          });
+        } else {
+          // setResponseMessage("Failed to add customer. Please try again.");
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        // setResponseMessage("An error occurred. Please try again.");
+      }
     } else {
       setErrors(validationErrors);
     }
@@ -128,13 +155,13 @@ const GetQuote = () => {
             <input
               type="tel"
               id="phone"
-              name="phone"
-              value={formData.phone}
+              name="number"
+              value={formData.number}
               onChange={handleChange}
               className="form-input w-full border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md p-3 shadow-inner"
             />
-            {errors.phone && (
-              <p className="text-red-500 text-sm">{errors.phone}</p>
+            {errors.number && (
+              <p className="text-red-500 text-sm">{errors.number}</p>
             )}
           </div>
           <div>
@@ -180,7 +207,8 @@ const GetQuote = () => {
               htmlFor="advertising"
               className="block mb-2 text-lg font-bold text-gray-700"
             >
-              What do you want to advertise? <span className="text-red-500">*</span>
+              What do you want to advertise?{" "}
+              <span className="text-red-500">*</span>
             </label>
             <input
               type="text"
