@@ -15,16 +15,22 @@ function App() {
   return (
     <>
       <Navbar />
-      {/* <Routes>
+      <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/contact-us" element={<ContactUs />}></Route>
         <Route path="/hall-of-fame" element={<HallFame />}></Route>
         <Route path="/faq" element={<Accordion />}></Route>
         <Route path="/advertise" element={<Advertise />}></Route>
-      </Routes> */}
-      <DistributeHome />
-      <DistributeSecond />
-      <DistributeInfo/>
+        <Route
+          path="/distribute"
+          element={
+            <>
+              <DistributeHome /> <DistributeSecond /> <DistributeInfo />
+            </>
+          }
+        ></Route>
+      </Routes>
+
       <Footer />
     </>
   );
