@@ -134,9 +134,6 @@ const Accordion = () => {
       {faqData.map((section, sectionIndex) => (
         <div key={sectionIndex} className="my-8 pb-10">
           <h1 className="text-2xl font-serif">{section.category}</h1>
-          <h2 className="text-center text-5xl pt-4 font-bold mb-4 text-white">
-            Frequently Asked Questions
-          </h2>
           <div className="flex justify-center w-screen">
             <ul className="space-y-2 w-3/4">
               {section.questions.map((faq, index) => (

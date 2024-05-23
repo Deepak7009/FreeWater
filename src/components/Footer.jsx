@@ -6,9 +6,9 @@ const Footer = () => {
             <div className="container-fluid mx-auto flex flex-col md:flex-row justify-around items-center space-y-6 md:space-y-0">
                 <div>
                     <div className="text-center md:text-left">
-                        <h2 className="text-2xl font-bold">Because water should be free</h2>
+                        <h2 className="text-2xl font-bold font-serif">Because water should be free</h2>
                         <p className="mt-2">Help us spread the word and share our movement with your friends and family</p>
-                        <button className="my-4 bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-blue-600 hover:text-xl">
+                        <button className="my-4 font-serif bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-blue-600 hover:text-xl">
                             Contact Us
                         </button>
                     </div>

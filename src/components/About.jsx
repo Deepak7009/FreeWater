@@ -51,9 +51,6 @@ function About() {
               FreeWaters donates enough money to provide one person with a safe
               water source for the rest of their life.
             </p>
-            <button className="bg-transparent hover:bg-gray-300 text-gray-800 font-semibold py-2 px-5 mt-6 text-xl border border-gray-400 rounded shadow transition duration-200 transform hover:scale-105">
-              Learn More
-            </button>
           </div>
           <div
             className="md:w-1/2 p-4  rounded-3xl overflow-hidden zoom-container"
@@ -94,9 +91,6 @@ function About() {
               protect everyone’s long-term health.
             </p>
             <div className="flex justify-center items-center">
-              <button className="bg-transparent hover:bg-gray-300 mt-8 text-gray-800 font-semibold py-2 px-5 text-xl border border-gray-400 rounded shadow transition duration-200 transform hover:scale-105">
-                Learn More
-              </button>
             </div>
           </div>
         </div>
