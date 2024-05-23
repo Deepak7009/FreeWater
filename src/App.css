@@ -17,3 +17,15 @@
 .bg-slide-hover:hover {
   animation: bg-slide 0.8s ease-in-out forwards;
 }
+.zoom-container {
+  overflow: hidden;
+  border-radius: 1.5rem;
+}
+
+.zoom-image {
+  transition: transform 0.3s ease-in-out;
+}
+
+.zoom-container:hover .zoom-image {
+  transform: scale(1.1);
+}
