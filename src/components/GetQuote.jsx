@@ -55,7 +55,7 @@ const GetQuote = () => {
   return (
     <div className="flex justify-center items-center min-h-screen py-8 px-4 bg-gray-100 mt-6">
       <div className="w-full max-w-3xl bg-white p-8 rounded-lg shadow-xl">
-        <h1 className="text-4xl font-bold mb-6 text-center text-gray-800">
+        <h1 className="text-4xl font-bold mb-6 text-center text-teal-600">
           Get a Quote
         </h1>
         <form className="space-y-6" onSubmit={handleSubmit}>
@@ -65,7 +65,7 @@ const GetQuote = () => {
                 htmlFor="firstName"
                 className="block mb-2 text-lg font-bold text-gray-700"
               >
-                First Name
+                First Name <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
@@ -84,7 +84,7 @@ const GetQuote = () => {
                 htmlFor="lastName"
                 className="block mb-2 text-lg font-bold text-gray-700"
               >
-                Last Name
+                Last Name <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
@@ -104,7 +104,7 @@ const GetQuote = () => {
               htmlFor="email"
               className="block mb-2 text-lg font-bold text-gray-700"
             >
-              Email
+              Email <span className="text-red-500">*</span>
             </label>
             <input
               type="email"
@@ -123,7 +123,7 @@ const GetQuote = () => {
               htmlFor="phone"
               className="block mb-2 text-lg font-bold text-gray-700"
             >
-              Phone Number
+              Phone Number <span className="text-red-500">*</span>
             </label>
             <input
               type="tel"
@@ -142,7 +142,7 @@ const GetQuote = () => {
               htmlFor="company"
               className="block mb-2 text-lg font-bold text-gray-700"
             >
-              Company Name
+              Company Name <span className="text-red-500">*</span>
             </label>
             <input
               type="text"
@@ -161,7 +161,7 @@ const GetQuote = () => {
               htmlFor="businessType"
               className="block mb-2 text-lg font-bold text-gray-700"
             >
-              Type of Business
+              Type of Business <span className="text-red-500">*</span>
             </label>
             <input
               type="text"
@@ -180,7 +180,7 @@ const GetQuote = () => {
               htmlFor="advertising"
               className="block mb-2 text-lg font-bold text-gray-700"
             >
-              What do you want to advertise?
+              What do you want to advertise? <span className="text-red-500">*</span>
             </label>
             <input
               type="text"
@@ -199,7 +199,7 @@ const GetQuote = () => {
               htmlFor="budget"
               className="block mb-2 text-lg font-bold text-gray-700"
             >
-              What is your budget?
+              What is your budget? <span className="text-red-500">*</span>
             </label>
             <input
               type="text"
@@ -218,7 +218,7 @@ const GetQuote = () => {
               htmlFor="message"
               className="block mb-2 text-lg font-bold text-gray-700"
             >
-              Message
+              Message <span className="text-red-500">*</span>
             </label>
             <textarea
               id="message"
@@ -252,7 +252,7 @@ const GetQuote = () => {
           </div>
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-green-400 to-blue-500 hover:from-green-500 hover:to-blue-600 text-white font-bold py-3 px-6 rounded-md shadow-lg transform hover:scale-105 transition-transform duration-300"
+            className="w-full bg-gradient-to-r from-green-400 to-blue-500 hover:from-green-500 hover:to-blue-600 text-white font-bold py-3 px-6 text-lg rounded-md shadow-lg transform hover:scale-105 transition-transform duration-300"
           >
             Send
           </button>

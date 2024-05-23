@@ -17,9 +17,17 @@
 .bg-slide-hover:hover {
   animation: bg-slide 0.8s ease-in-out forwards;
 }
+
+.distribute_home_bg {
+  background-image: url("./img/distribute2.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
 .zoom-container {
   overflow: hidden;
-  border-radius: 1.5rem;
+  border-radius: 1.5rem; 
 }
 
 .zoom-image {
@@ -29,3 +37,5 @@
 .zoom-container:hover .zoom-image {
   transform: scale(1.1);
 }
+
+
