@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import axios from 'axios';
-
+import axios from "axios";
 
 const GetQuote = () => {
   const [formData, setFormData] = useState({
@@ -54,7 +53,7 @@ const GetQuote = () => {
           formData
         );
         if (response.status === 201) {
-          // setResponseMessage("Customer added successfully!");
+          alert("Customer added successfully!");
           setFormData({
             firstName: "",
             lastName: "",
@@ -68,11 +67,11 @@ const GetQuote = () => {
             recaptcha: false,
           });
         } else {
-          // setResponseMessage("Failed to add customer. Please try again.");
+          alert("Failed to add customer. Please try again.");
         }
       } catch (error) {
         console.error("Error:", error);
-        // setResponseMessage("An error occurred. Please try again.");
+        alert("An error occurred. Please try again.");
       }
     } else {
       setErrors(validationErrors);
