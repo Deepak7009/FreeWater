@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const GetQuote = () => {
   const [formData, setFormData] = useState({
@@ -53,7 +55,7 @@ const GetQuote = () => {
           formData
         );
         if (response.status === 201) {
-          alert("Customer added successfully!");
+          toast.success('Contact Details added successfully!');
           setFormData({
             firstName: "",
             lastName: "",
@@ -67,11 +69,10 @@ const GetQuote = () => {
             recaptcha: false,
           });
         } else {
-          alert("Failed to add customer. Please try again.");
-        }
+          toast.error('Failed to add customer. Please try again.');        }
       } catch (error) {
         console.error("Error:", error);
-        alert("An error occurred. Please try again.");
+        toast.error('An error occurred. Please try again.');
       }
     } else {
       setErrors(validationErrors);
@@ -84,6 +85,7 @@ const GetQuote = () => {
         <h1 className="text-4xl font-bold mb-6 text-center text-teal-600">
           Get a Quote
         </h1>
+        <ToastContainer />
         <form className="space-y-6" onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
