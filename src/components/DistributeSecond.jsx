@@ -5,7 +5,7 @@ const DistributeSecond = () => {
     <section className="bg-white py-[60px]">
       <div className="max-w-[1050px] mx-auto px-[12px]">
         <div className="flex lg:flex-row  flex-wrap flex-col">
-          <div className="lg:w-3/5 w-full flex justify-center">
+          <div className="lg:w-3/5 w-full gap-10 flex justify-center">
             <img className="h-[380px]" src={bottle} alt="bottle" />
             <img
               className="h-[380px] sm:block hidden"

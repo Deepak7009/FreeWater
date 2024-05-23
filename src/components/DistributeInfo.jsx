@@ -14,7 +14,7 @@ const DistributeInfo = () => {
             </p>
             <input
               required
-              className=" w-full py-3 outline-none border-[2px] border-solid border-transparent rounded-md px-3 hover:border-black bg-[#87838346]"
+              className=" w-full py-3  outline-2 outline-black  rounded-md px-3 bg-[#87838346]"
               type="text"
             />
             <p className=" mt-[30px] leading-[1.3em] mb-2 text-[18px] sm:text-[25px] text-black  opacity-[.8]">
@@ -22,7 +22,7 @@ const DistributeInfo = () => {
             </p>
             <input
               required
-              className=" w-full py-3 outline-none border-[2px] border-solid border-transparent rounded-md px-3 hover:border-black bg-[#87838346]"
+              className=" w-full py-3 outline-2 outline-black  rounded-md px-3 bg-[#87838346]"
               type="text"
             />
             <p className=" mt-[30px] leading-[1.3em] mb-2 text-[18px] sm:text-[25px] text-black  opacity-[.8]">
@@ -30,7 +30,7 @@ const DistributeInfo = () => {
             </p>
             <input
               required
-              className=" w-full py-3 outline-none border-[2px] border-solid border-transparent rounded-md px-3 hover:border-black bg-[#87838346]"
+              className=" w-full py-3 outline-2 outline-black  rounded-md px-3 bg-[#87838346]"
               type=" email"
             />
             <p className=" mt-[30px] leading-[1.3em] mb-2 text-[18px] sm:text-[25px] text-black  opacity-[.8]">
@@ -38,7 +38,7 @@ const DistributeInfo = () => {
             </p>
             <input
               required
-              className=" w-full py-3 outline-none border-[2px] border-solid border-transparent rounded-md px-3 hover:border-black bg-[#87838346]"
+              className=" w-full py-3 outline-2 outline-black  rounded-md px-3 bg-[#87838346]"
               type="number"
             />
             <p className=" mt-[30px] leading-[1.3em] mb-2 text-[18px] sm:text-[25px] text-black  opacity-[.8]">
@@ -46,7 +46,7 @@ const DistributeInfo = () => {
             </p>
             <input
               required
-              className=" w-full py-3 outline-none border-[2px] border-solid border-transparent rounded-md px-3 hover:border-black bg-[#87838346]"
+              className=" w-full py-3 outline-2 outline-black  rounded-md px-3 bg-[#87838346]"
               type="text"
             />
             <p className=" mt-[30px] leading-[1.3em] mb-2 text-[18px] sm:text-[25px] text-black  opacity-[.8]">
@@ -54,7 +54,7 @@ const DistributeInfo = () => {
             </p>
             <input
               required
-              className=" w-full py-3 outline-none border-[2px] border-solid border-transparent rounded-md px-3 hover:border-black bg-[#87838346]"
+              className=" w-full py-3 outline-2 outline-black  rounded-md px-3 bg-[#87838346]"
               type="text"
             />
             <p className=" mt-[30px] leading-[1.3em] mb-2 text-[18px] sm:text-[25px] text-black  opacity-[.8]">
@@ -62,7 +62,7 @@ const DistributeInfo = () => {
             </p>
             <input
               required
-              className=" w-full py-3 outline-none border-[2px] border-solid border-transparent rounded-md px-3 hover:border-black bg-[#87838346]"
+              className=" w-full py-3 outline-2 outline-black  rounded-md px-3 bg-[#87838346]"
               type="text"
             />
             <p className=" mt-[30px] leading-[1.3em] mb-2 text-[18px] sm:text-[25px] text-black  opacity-[.8]">
@@ -70,7 +70,7 @@ const DistributeInfo = () => {
             </p>
             <input
               required
-              className=" w-full py-3 outline-none border-[2px] border-solid border-transparent rounded-md px-3 hover:border-black bg-[#87838346]"
+              className=" w-full py-3 outline-2 outline-black  rounded-md px-3 bg-[#87838346]"
               type="text"
             />
             <p className=" mt-[30px] leading-[1.3em] mb-2 text-[18px] sm:text-[25px] text-black  opacity-[.8]">
@@ -78,7 +78,7 @@ const DistributeInfo = () => {
             </p>
             <input
               required
-              className=" w-full py-3 outline-none border-[2px] border-solid border-transparent rounded-md px-3 hover:border-black bg-[#87838346]"
+              className=" w-full py-3 outline-2 outline-black  rounded-md px-3 bg-[#87838346]"
               type="number"
             />
             <p className=" mt-[30px] leading-[1.3em] mb-2 text-[18px] sm:text-[25px] text-black  opacity-[.8]">
@@ -86,7 +86,7 @@ const DistributeInfo = () => {
             </p>
             <input
               required
-              className=" w-full py-3 outline-none border-[2px] border-solid border-transparent rounded-md px-3 hover:border-black bg-[#87838346]"
+              className=" w-full py-3 outline-2 outline-black  rounded-md px-3 bg-[#87838346]"
               type="text"
             />
             <p className=" mt-[30px] leading-[1.3em] mb-2 text-[18px] sm:text-[25px] text-black  opacity-[.8]">
@@ -94,7 +94,7 @@ const DistributeInfo = () => {
             </p>
             <input
               required
-              className=" w-full py-3 outline-none border-[2px] border-solid border-transparent rounded-md px-3 hover:border-black bg-[#87838346]"
+              className=" w-full py-3 outline-2 outline-black  rounded-md px-3 bg-[#87838346]"
               type="text"
             />
             <p className=" mt-[30px] leading-[1.3em] mb-2 text-[18px] sm:text-[25px] text-black  opacity-[.8]">
@@ -102,10 +102,10 @@ const DistributeInfo = () => {
             </p>
             <input
               required
-              className=" w-full py-3 outline-none border-[2px] border-solid border-transparent rounded-md px-3 hover:border-black bg-[#87838346]"
+              className=" w-full py-3 outline-2 outline-black  rounded-md px-3 bg-[#87838346]"
               type="text"
             />
-            <button className=" mt-[25px] px-[30px] rounded-md py-[13px] bg-slate-900 text-white border-2 border-solid  border-slate-900 ">
+            <button className=" mt-[25px] px-[30px] rounded-md py-[13px] bg-slate-900 text-white border-2 border-solid  border-slate-900 hover:bg-transparent hover:text-slate-900 duration-300 ">
               Send
             </button>
           </form>
