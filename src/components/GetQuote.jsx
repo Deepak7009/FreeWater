@@ -44,56 +44,55 @@ const GetQuote = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const { firstName, lastName, email, number, company, businessType, advertising, budget, message } = formData;
+
     const validationErrors = validate();
     if (Object.keys(validationErrors).length === 0) {
-      try {
-        // Send an email using EmailJS
-        const templateParams = {
-          firstName :formData.firstName,
-          lastName: formData.lastName,
-          from_email: formData.email,
-          phone: formData.number,
-          company: formData.company,
-          business_type: formData.businessType,
-          advertising: formData.advertising,
-          budget: formData.budget,
-          message: formData.message,
-        };
+        try {
+            const templateParams = {
+                name: `${firstName} ${lastName}`,
+                email,
+                number,
+                company,
+                businessType,
+                advertising,
+                budget,
+                message,
+            };
 
-        emailjs.send(
-          'service_6154xmo', // service ID
-          'template_dllczou', // template ID
-          templateParams,
-          'UyLtUdpjHjsVa7YtS' // user ID
-        )
-          .then((result) => {
-            console.log(result.text);
-            toast.success('Email sent successfully!');
-          }, (error) => {
-            console.error(error.text);
-            toast.error('Failed to send email. Please try again.');
-          });
+            const result = await emailjs.send(
+                'service_kz7aisw',
+                'template_45no4uh',
+                templateParams,
+                'sRzkVggIpZqCpMPKX'
+            );
 
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          number: "",
-          company: "",
-          businessType: "",
-          advertising: "",
-          budget: "",
-          message: "",
-          recaptcha: false,
-        });
-      } catch (error) {
-        console.error("Error:", error);
-        toast.error('An error occurred. Please try again.');
-      }
+            if (result.status === 200) {
+                toast.success('Email sent successfully!');
+                setFormData({
+                    firstName: "",
+                    lastName: "",
+                    email: "",
+                    number: "",
+                    company: "",
+                    businessType: "",
+                    advertising: "",
+                    budget: "",
+                    message: "",
+                    recaptcha: false,
+                });
+            } else {
+                toast.error('Failed to send email. Please try again.');
+            }
+        } catch (error) {
+            console.error("Error:", error);
+            toast.error('An error occurred. Please try again.');
+        }
     } else {
-      setErrors(validationErrors);
+        setErrors(validationErrors);
     }
-  };
+};
 
   return (
     <div className="flex justify-center items-center min-h-screen py-8 px-4 bg-gray-100 mt-6">
