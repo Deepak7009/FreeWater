@@ -61,10 +61,10 @@ const GetQuote = () => {
         };
 
         emailjs.send(
-          'service_kz7aisw', // service ID
-          'template_45no4uh', // template ID
+          'service_6154xmo', // service ID
+          'template_dllczou', // template ID
           templateParams,
-          'sRzkVggIpZqCpMPKX' // user ID
+          'UyLtUdpjHjsVa7YtS' // user ID
         )
           .then((result) => {
             console.log(result.text);
