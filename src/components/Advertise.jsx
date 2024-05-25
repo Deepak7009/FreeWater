@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import img1 from "../images/img1.webp";
+import img1 from "../img/WaterBottle5.png";
 import img2 from "../images/img2.webp";
 import bg from "../images/bg.svg";
 import AdvertiseMid from "./AdvertiseMid";

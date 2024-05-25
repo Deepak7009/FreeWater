@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import WaterBottle from '../img/contactBottle.webp';
+import WaterBottle from '../img/WaterBottle4.png';
 
 function ContactUs() {
 

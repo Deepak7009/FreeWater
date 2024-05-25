@@ -1,11 +1,9 @@
 import React, { useEffect } from 'react'
 import WaterBoy from '../img/water1.webp'
 import WaterGirl from '../img/water2.webp'
-import Bottle2 from '../img/bottle2.webp'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import video1 from "../videos/video1.mp4";
-import bottles from "../images/bottle1.webp";
+import bottles from "../img/WaterBottle4.png";
 
 function About() {
 
@@ -19,22 +17,14 @@ function About() {
         <div className='overflow-hidden'>
             <section>
                 <div className="flex justify-center flex-col md:flex-row items-center pr-8">
-                    <div className="md:w-1/2 pl-4" data-aos="fade-right">
-                        <video
-                            className="hidden md:block w-[500px] h-auto object-cover mb-4"
-                            src={video1}
-                            autoPlay
-                            loop
-                            muted
-                        ></video>
+                    <div className="md:w-1/2 pl-4 py-5 flex justify-center" data-aos="fade-right">
                         <img
-                            className="block md:hidden w-full h-auto mb-4"
+                            className="block mb-4"
                             src={bottles}
                             alt="Description"
-
                         />
                     </div>
-                    <div className="md:w-1/2 pr-4 p-4 ml-5 max-w-[600px] " data-aos="fade-up">
+                    <div className="md:w-1/2 py-4 md:pr-4 ml-5 max-w-[600px]  flex justify-center " data-aos="fade-up">
 
                         <p className="mb-4 text-xl px-2">
                             FreeWater is an innovative advertising platform that utilizes premium spring water as a new type of advertising medium while prioritizing philanthropy and sustainability. Ten cents from each beverage is donated to charity to
@@ -53,7 +43,7 @@ function About() {
                         <h2 className="text-2xl md:text-4xl font-bold mb-7">
                             We are partnered with WellAware
                         </h2>
-                        <p className="mb-4 text-xl px-2">
+                        <p className="mb-4 text-xl md:px-2">
                             We donate ten cents per beverage to WellAware, an Austin based non-profit that builds water wells in East Africa. Every 150 FreeWaters donates enough money to provide one person with a safe water source for the rest of their life.
                         </p>
                         <button className="bg-transparent hover:bg-gray-300 text-gray-800 font-semibold py-2 px-5 mt-6 text-xl border border-gray-400 rounded shadow transition duration-200 transform hover:scale-105">
@@ -64,7 +54,7 @@ function About() {
                         <img
                             src={WaterBoy}
                             alt="A child drinking water from a tap"
-                            className="w-full max-w-[600px] h-auto object-cover"
+                            className="w-full max-w-[600px] rounded-3xl h-auto object-cover"
                         />
                     </div>
                 </div>
@@ -72,11 +62,19 @@ function About() {
 
             <section className="bg-gray-50 py-12">
                 <div className="flex justify-center flex-col md:flex-row items-center p-8">
-                    <div className="md:w-1/2 p-4 ml-5 max-w-[600px] " data-aos="fade-right">
+
+                    <div className="md:w-1/2 p-4" data-aos="fade-right">
+                        <img
+                            src={WaterGirl}
+                            alt="A child drinking water from a tap"
+                            className="w-full max-w-[600px] h-auto object-cover rounded-3xl shadow-lg"
+                        />
+                    </div>
+                    <div className="md:w-1/2 p-4 ml-5 max-w-[600px] " data-aos="fade-left">
                         <h2 className="text-2xl md:text-4xl font-bold mb-7">
                             Charity : Water
                         </h2>
-                        <p className="mb-4 text-xl px-2">
+                        <p className="mb-4 text-xl md:px-2">
                             They work exclusively with local partners who build sustainable, community-owned water projects. Their partners also facilitate comprehensive water, sanitation, and hygiene programming to protect everyone’s long-term health.
                         </p>
                         <div className='flex justify-center items-center'>
@@ -84,33 +82,6 @@ function About() {
                                 Learn More
                             </button>
                         </div>
-                    </div>
-                    <div className="md:w-1/2 p-4" data-aos="fade-left">
-                        <img
-                            src={WaterGirl}
-                            alt="A child drinking water from a tap"
-                            className="w-full max-w-[600px] h-auto object-cover rounded-lg shadow-lg"
-                        />
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <div className="flex justify-center flex-col md:flex-row items-center p-8 mt-[40px]">
-                    <div className="md:w-1/2 p-4" data-aos="fade-up">
-                        <img
-                            src={Bottle2}
-                            alt="A child drinking water from a tap"
-                            className="w-full max-w-[600px] h-auto object-cover"
-                        />
-                    </div>
-                    <div className="md:w-1/2 p-4 ml-5 max-w-[600px] " data-aos="fade-down">
-                        <h2 className=" text-2xl md:text-6xl font-bold mb-4">
-                            We never use plastic bottles
-                        </h2>
-                        <p className="mb-4 text-xl px-2 pt-4">
-                            FreeWater comes in aluminum bottles and paper cartons of natural spring water because we didn't want to make water free and do it in a plastic bottle.
-                        </p>
                     </div>
 
                 </div>
