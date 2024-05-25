@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Bottle from '../img/Bottle1.webp';
+import { Link } from 'react-router-dom';
+
 
 function Hero() {
     useEffect(() => {
@@ -19,9 +21,9 @@ function Hero() {
                             Put Your Brand In Everyone's Hand!
                         </h1>
                         <div className='my-10'>
-                            <button className='text-2xl py-3 px-8 bg-white text-blue-500 border border-blue-500 rounded-full shadow-md hover:bg-blue-500 hover:text-white transition duration-300'>
+                            <Link to ="/advertise" className='text-2xl py-3 px-8 bg-white text-blue-500 border border-blue-500 rounded-full shadow-md hover:bg-blue-500 hover:text-white transition duration-300'>
                                 Advertise With Us
-                            </button>
+                            </Link>
                         </div>
                         <div>
                             <img src={Bottle} alt='Brand Bottle' className='mx-auto mt-10 rounded-lg shadow-2xl' style={{ maxWidth: '400px' }} />
