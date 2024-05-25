@@ -59,7 +59,7 @@ const Accordion = () => {
         {
           question: "How do I distribute FreeWater?",
           answer:
-            "We are currently looking to partner with distribution points in the lower 48 states. In most cases, our ideal distribution partnerships are with retail stores and outlets. However, we may be willing to partner with the right individuals to distribute FreeWater in their town. Please fill out the contact form on our distribution page / leave a detailed message and someone from our team will get back to you ASAP."
+            "We are currently looking to partner with distribution points in the lower 48 states. In most cases, our ideal distribution partnerships are with retail stores and outlets. However, we may be willing to partner with the right individuals to distribute FreeWater in their town. Please fill out the contact form on our distribution page / leave a detailed message and someone from our team will get back to you ASAP.",
         },
         {
           question: "Can I get FreeWater delivered?",
@@ -68,8 +68,7 @@ const Accordion = () => {
         },
         {
           question: "Do distributers have to advertise?",
-          answer:
-            "No, but that is the fastest way to get started.",
+          answer: "No, but that is the fastest way to get started.",
         },
       ],
     },
@@ -78,47 +77,35 @@ const Accordion = () => {
       questions: [
         {
           question: "How much does it cost to advertise?",
-          answer:
-            `It depends on several factors:
-
+          answer: `It depends on several factors:
             1) Aluminum bottles or paper cartons?
-            
             2) The number of units?
-            
             3) Are we distributing the water or are you distributing the water?
-            
             4) The location of distribution?
-            
             5) Do you have a graphic designer on staff or do you need us to design it for you?
-            
             6) Are you splitting the ad space with someone else?`,
         },
         {
           question: "How long does it take to place an advertising order?",
-          answer:
-            `Aluminum Bottles
-
+          answer: `Aluminum Bottles
             Roughly six weeks from design approval and payment. However, you should always place your order as far in advance as possible if you have a time sensitive project.
-            
             Paper cartons
-            
             The current lead time for paper cartons is 4 months.`,
         },
         {
-            question: "How does FreeWater compare to other advertising mediums?",
-            answer:
-              "FreeWater is the best brand loyalty platform on Earth and there are unique opportunities to incorporate this new and exciting medium into most ad budgets.",
-          },
-          {
-            question: "How do I advertise?",
-            answer:
-              "To advertise, please visit https://freewater.io",
-          },
-          {
-            question: "How do I advertise with FreeWater?",
-            answer:
-              "To advertise with FreeWater, please visit https://freewater.io/advertise",
-          },
+          question: "How does FreeWater compare to other advertising mediums?",
+          answer:
+            "FreeWater is the best brand loyalty platform on Earth and there are unique opportunities to incorporate this new and exciting medium into most ad budgets.",
+        },
+        {
+          question: "How do I advertise?",
+          answer: "To advertise, please visit https://freewater.io",
+        },
+        {
+          question: "How do I advertise with FreeWater?",
+          answer:
+            "To advertise with FreeWater, please visit https://freewater.io/advertise",
+        },
       ],
     },
     {
@@ -136,15 +123,14 @@ const Accordion = () => {
         },
         {
           question: "How do I invest?",
-          answer:
-            `Please visit and fill out the form making sure to type "investor" as a subject line. https://freewater.io/contact-us`,
+          answer: `Please visit and fill out the form making sure to type "investor" as a subject line. https://freewater.io/contact-us`,
         },
       ],
     },
   ];
 
   return (
-    <div className="w-full mb-4 overflow-hidden text-center">
+    <div className="w-full mb-4 overflow-hidden text-center perspective-[1000px]">
       {faqData.map((section, sectionIndex) => (
         <div key={sectionIndex} className="my-8 pb-10">
           <h1 className="text-2xl font-serif">{section.category}</h1>
@@ -156,7 +142,7 @@ const Accordion = () => {
               {section.questions.map((faq, index) => (
                 <li
                   key={index}
-                  className="border-2 p-4 bg-white my-2 rounded-lg"
+                  className="border-2 p-4 bg-white my-2 rounded-lg transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl"
                 >
                   <button
                     onClick={() => toggleFaq(`${sectionIndex}-${index}`)}
@@ -168,8 +154,14 @@ const Accordion = () => {
                     </span>
                   </button>
                   <div
-                    ref={(el) => (contentRefs.current[`${sectionIndex}-${index}`] = el)}
-                    className={`overflow-hidden transition-all duration-500 ease-in-out ${openFaq === `${sectionIndex}-${index}` ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}
+                    ref={(el) =>
+                      (contentRefs.current[`${sectionIndex}-${index}`] = el)
+                    }
+                    className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                      openFaq === `${sectionIndex}-${index}`
+                        ? "max-h-[1000px] opacity-100"
+                        : "max-h-0 opacity-0"
+                    }`}
                   >
                     <p className="mt-2 text-black text-start">{faq.answer}</p>
                   </div>
