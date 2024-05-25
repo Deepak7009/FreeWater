@@ -1,10 +1,11 @@
-import React, {useEffect} from 'react'
-import Bottle3 from '../img/bottle3.webp'
+import React, { useEffect } from 'react'
 import WaterBoy from '../img/water1.webp'
 import WaterGirl from '../img/water2.webp'
 import Bottle2 from '../img/bottle2.webp'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import video1 from "../videos/video1.mp4";
+import bottles from "../images/bottle1.webp";
 
 function About() {
 
@@ -19,10 +20,18 @@ function About() {
             <section>
                 <div className="flex justify-center flex-col md:flex-row items-center pr-8">
                     <div className="md:w-1/2 pl-4" data-aos="fade-right">
+                        <video
+                            className="hidden md:block w-[500px] h-auto object-cover mb-4"
+                            src={video1}
+                            autoPlay
+                            loop
+                            muted
+                        ></video>
                         <img
-                            src={Bottle3}
-                            alt=""
-                            className="w-[500px] h-auto object-cover"
+                            className="block md:hidden w-full h-auto mb-4"
+                            src={bottles}
+                            alt="Description"
+
                         />
                     </div>
                     <div className="md:w-1/2 pr-4 p-4 ml-5 max-w-[600px] " data-aos="fade-up">
@@ -39,8 +48,8 @@ function About() {
 
 
             <section>
-                <div className="flex justify-center bg-gray-100 flex-col md:flex-row items-center p-8" data-aos="fade-up-right">
-                    <div className="md:w-1/2 p-4 ml-5 max-w-[600px]">
+                <div className="flex justify-center bg-gray-100 flex-col md:flex-row items-center p-8">
+                    <div className="md:w-1/2 p-4 ml-5 max-w-[600px]" data-aos="fade-down">
                         <h2 className="text-2xl md:text-4xl font-bold mb-7">
                             We are partnered with WellAware
                         </h2>
@@ -51,7 +60,7 @@ function About() {
                             Learn More
                         </button>
                     </div>
-                    <div className="md:w-1/2 p-4">
+                    <div className="md:w-1/2 p-4" data-aos="fade-up">
                         <img
                             src={WaterBoy}
                             alt="A child drinking water from a tap"
@@ -61,30 +70,30 @@ function About() {
                 </div>
             </section>
 
-          <section className="bg-gray-50 py-12">
-            <div className="flex justify-center flex-col md:flex-row items-center p-8">
-                <div className="md:w-1/2 p-4 ml-5 max-w-[600px] " data-aos="fade-right">
-                    <h2 className="text-2xl md:text-4xl font-bold mb-7">
-                        Charity : Water
-                    </h2>
-                    <p className="mb-4 text-xl px-2">
-                        They work exclusively with local partners who build sustainable, community-owned water projects. Their partners also facilitate comprehensive water, sanitation, and hygiene programming to protect everyone’s long-term health.
-                    </p>
-                    <div className='flex justify-center items-center'>
-                        <button className="bg-transparent hover:bg-gray-300 mt-8 text-gray-800 font-semibold py-2 px-5 text-xl border border-gray-400 rounded shadow transition duration-200 transform hover:scale-105">
-                            Learn More
-                        </button>
+            <section className="bg-gray-50 py-12">
+                <div className="flex justify-center flex-col md:flex-row items-center p-8">
+                    <div className="md:w-1/2 p-4 ml-5 max-w-[600px] " data-aos="fade-right">
+                        <h2 className="text-2xl md:text-4xl font-bold mb-7">
+                            Charity : Water
+                        </h2>
+                        <p className="mb-4 text-xl px-2">
+                            They work exclusively with local partners who build sustainable, community-owned water projects. Their partners also facilitate comprehensive water, sanitation, and hygiene programming to protect everyone’s long-term health.
+                        </p>
+                        <div className='flex justify-center items-center'>
+                            <button className="bg-transparent hover:bg-gray-300 mt-8 text-gray-800 font-semibold py-2 px-5 text-xl border border-gray-400 rounded shadow transition duration-200 transform hover:scale-105">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                    <div className="md:w-1/2 p-4" data-aos="fade-left">
+                        <img
+                            src={WaterGirl}
+                            alt="A child drinking water from a tap"
+                            className="w-full max-w-[600px] h-auto object-cover rounded-lg shadow-lg"
+                        />
                     </div>
                 </div>
-                <div className="md:w-1/2 p-4" data-aos="fade-left">
-                    <img
-                        src={WaterGirl}
-                        alt="A child drinking water from a tap"
-                        className="w-full max-w-[600px] h-auto object-cover rounded-lg shadow-lg"
-                    />
-                </div>
-            </div>
-        </section>
+            </section>
 
             <section>
                 <div className="flex justify-center flex-col md:flex-row items-center p-8 mt-[40px]">

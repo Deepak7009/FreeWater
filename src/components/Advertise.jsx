@@ -1,25 +1,34 @@
-import React from "react";
+import React, { useEffect } from 'react'
 import img1 from "../images/img1.webp";
 import img2 from "../images/img2.webp";
 import bg from "../images/bg.svg";
 import AdvertiseMid from "./AdvertiseMid";
 import VideoSlider from "./VideoSlider";
 import GetQuote from "./GetQuote";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 // import './advertise.css'
 
 const Advertise = () => {
+
+  useEffect(() => {
+    AOS.init({
+        duration: 1000,
+    });
+}, []);
+
   return (
     <>
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-wrap mx-4 items-center">
-          <div className="w-full md:w-1/2 px-4 mb-8 md:mb-0">
+          <div className="w-full md:w-1/2 px-4 mb-8 md:mb-0" data-aos="fade-right">
             <img
               src={img1}
               alt="Advertise"
               className="w-full h-auto rounded-lg"
             />
           </div>
-          <div className="w-full md:w-1/2 px-4 flex flex-col justify-center">
+          <div className="w-full md:w-1/2 px-4 flex flex-col justify-center" data-aos="fade-left">
             <div className="max-w-xs md:max-w-none mx-auto">
               <h1 className="text-2xl lg:text-[44px] font-bold leading-[1] mb-4">
                 PUT YOUR BRAND IN <br />
@@ -36,7 +45,7 @@ const Advertise = () => {
           </div>
         </div>
         <div className="flex flex-wrap mx-4 items-center">
-          <div className="w-full mt-12 md:w-2/3 px-4">
+          <div className="w-full mt-12 md:w-2/3 px-4" data-aos="fade-up">
             <h1 className="text-2xl lg:text-[45px] leading-[1] font-bold mb-4">
               Our product is a blank canvas
             </h1>
@@ -87,7 +96,7 @@ const Advertise = () => {
               </button>
             </div>
           </div>
-          <div className="w-full md:w-1/3 px-4">
+          <div className="w-full md:w-1/3 px-4" data-aos="fade-down">
             <img
               src={img2}
               alt="Image"
