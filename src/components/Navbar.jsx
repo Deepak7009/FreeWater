@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-gray-900 text-gray-300 p-4">
-      <div className="container-fluid mx-auto flex justify-between items-center">
+      <div className="container mx-auto flex justify-between items-center">
         <div className="text-white text-2xl font-bold">FreeWater</div>
         <div className="md:hidden">
           <button
