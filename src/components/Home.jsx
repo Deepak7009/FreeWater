@@ -1,10 +1,17 @@
 import React from "react";
+import Hero from "./Hero";
+import Features from "./Features";
+import About from "./About";
+import Subscribe from "./Subscribe";
 
 function Home() {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">Deepak Verma</h1>
-    </div>
+    <>
+    <Hero />
+    <Features />
+    <About />
+    <Subscribe />  
+    </>
   );
 }
 
