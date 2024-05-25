@@ -1,20 +1,18 @@
-@keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+@keyframes bg-slide {
+  0% {
+    background-position: 100% 0;
   }
-  
-  .fade-in-up {
-    animation: fadeInUp 1s ease-out forwards;
+  100% {
+    background-position: 0 0;
   }
-  
-  .fade-in-up-delay {
-    animation: fadeInUp 1s ease-out forwards;
-    animation-delay: 0.5s;
-  }
-  
+}
+
+.bg-slide-hover {
+  background: linear-gradient(to right, #3b82f6, #14b8a6);
+  background-size: 200% 100%;
+  transition: background-position 0.8s ease-in-out;
+}
+
+.bg-slide-hover:hover {
+  animation: bg-slide 0.8s ease-in-out forwards;
+}

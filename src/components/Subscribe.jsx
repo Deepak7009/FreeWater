@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -60,11 +60,13 @@ function Subscribe() {
                 </div>
                 <div className="flex items-center justify-center">
                     <button
-                        className="bg-blue-600 hover:bg-blue-700 text-white text-lg font-bold py-2 px-5 rounded focus:outline-none focus:shadow-outline transition duration-200"
+                        className="bg-blue-500 text-white text-lg font-bold py-2 px-8 rounded-full focus:outline-none focus:shadow-outline transition duration-400 bg-slide-hover"
                         type="button"
                     >
                         Send
                     </button>
+
+
                 </div>
             </form>
         </div>
