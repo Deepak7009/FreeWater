@@ -1,11 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 const Accordion = () => {
   const [openFaq, setOpenFaq] = useState(null);
+  const contentRefs = useRef([]);
 
   const toggleFaq = (index) => {
     setOpenFaq(openFaq === index ? null : index);
   };
+
+  useEffect(() => {
+    // Calculate heights of all elements on initial render
+    contentRefs.current.forEach((ref) => {
+      if (ref) {
+        ref.style.maxHeight = ref.scrollHeight + "px";
+      }
+    });
+  }, []);
 
   const faqData = [
     {
@@ -47,14 +57,19 @@ const Accordion = () => {
       category: "Distribution",
       questions: [
         {
-          question: "Where can I find FreeWater?",
+          question: "How do I distribute FreeWater?",
           answer:
-            "FreeWater is distributed in select locations. Check our website for a list of distribution points.",
+            "We are currently looking to partner with distribution points in the lower 48 states. In most cases, our ideal distribution partnerships are with retail stores and outlets. However, we may be willing to partner with the right individuals to distribute FreeWater in their town. Please fill out the contact form on our distribution page / leave a detailed message and someone from our team will get back to you ASAP."
         },
         {
           question: "Can I get FreeWater delivered?",
           answer:
-            "Yes, we offer delivery services in certain areas. Visit our delivery page for more information.",
+            "Retail outlets need to commit to distributing a minimum of one pallet of FreeWater per month. The location needs to be enticing enough to line up advertisers to cover the cost of the product/distribution. Each location will need to advertise that they are a FreeWater distributor by posting a sign on their window and on their website if applies. We will also market your location for you. Individuals who wish to “officially” distribute FreeWater must be hand selected by our team to ensure that they are a good fit.",
+        },
+        {
+          question: "Do distributers have to advertise?",
+          answer:
+            "No, but that is the fastest way to get started.",
         },
       ],
     },
@@ -62,34 +77,67 @@ const Accordion = () => {
       category: "Advertising",
       questions: [
         {
-          question: "How do the ads on FreeWater work?",
+          question: "How much does it cost to advertise?",
           answer:
-            "Advertisers pay to have their ads printed on FreeWater bottles and cartons, funding the free distribution of water.",
+            `It depends on several factors:
+
+            1) Aluminum bottles or paper cartons?
+            
+            2) The number of units?
+            
+            3) Are we distributing the water or are you distributing the water?
+            
+            4) The location of distribution?
+            
+            5) Do you have a graphic designer on staff or do you need us to design it for you?
+            
+            6) Are you splitting the ad space with someone else?`,
         },
         {
-          question: "Can I advertise on FreeWater?",
+          question: "How long does it take to place an advertising order?",
           answer:
-            "Yes, we offer advertising opportunities. Contact our sales team for more details.",
+            `Aluminum Bottles
+
+            Roughly six weeks from design approval and payment. However, you should always place your order as far in advance as possible if you have a time sensitive project.
+            
+            Paper cartons
+            
+            The current lead time for paper cartons is 4 months.`,
         },
+        {
+            question: "How does FreeWater compare to other advertising mediums?",
+            answer:
+              "FreeWater is the best brand loyalty platform on Earth and there are unique opportunities to incorporate this new and exciting medium into most ad budgets.",
+          },
+          {
+            question: "How do I advertise?",
+            answer:
+              "To advertise, please visit https://freewater.io",
+          },
+          {
+            question: "How do I advertise with FreeWater?",
+            answer:
+              "To advertise with FreeWater, please visit https://freewater.io/advertise",
+          },
       ],
     },
     {
       category: "Other",
       questions: [
         {
-          question: "Other1",
+          question: "Can I use FreeWater as a fundraising tool?",
           answer:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae similique quasi incidunt minima molestiae corporis voluptatibus culpa reiciendis quos animi.",
+            "We will create special partnerships for 501(c)(3) organizations or any other positive community outlets such as church groups, sports programs, and schools. Partners who are using FreeWater as a fundraiser must be able to sell all the ad space themselves and we will contribute between ten and twenty five cents per beverage to the partner depending on the quantity and the price at which the product is sold.",
         },
         {
-          question: "Other2",
+          question: "Will you offer other free products in the future?",
           answer:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, provident sint magni consequatur adipisci sit ad quo, sequi commodi laborum, ut nisi minima animi enim asperiores architecto. Quibusdam, corrupti molestias.",
+            "Yes, we are launching a free supermarket / Amazon 2.0, and FreeWater is simply our first product. We have created a handful of processes that will enable the free and profitable distribution of nearly every type of product that can be purchased in COSTCO today. This includes food, beverages, clothing, medicine, computers, transportation, and travel. Each category of product will donate a percentage of its revenue to a different charitable cause.",
         },
         {
-          question: "Other3",
+          question: "How do I invest?",
           answer:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur error totam mollitia, obcaecati voluptatem perferendis blanditiis, dolorum asperiores, voluptate fuga molestiae qui corporis assumenda animi vero incidunt est molestias rerum. Sapiente unde itaque libero commodi error voluptatem quae deserunt corporis.",
+            `Please visit and fill out the form making sure to type "investor" as a subject line. https://freewater.io/contact-us`,
         },
       ],
     },
@@ -119,9 +167,12 @@ const Accordion = () => {
                       {openFaq === `${sectionIndex}-${index}` ? "-" : "+"}
                     </span>
                   </button>
-                  {openFaq === `${sectionIndex}-${index}` && (
+                  <div
+                    ref={(el) => (contentRefs.current[`${sectionIndex}-${index}`] = el)}
+                    className={`overflow-hidden transition-all duration-500 ease-in-out ${openFaq === `${sectionIndex}-${index}` ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}
+                  >
                     <p className="mt-2 text-black text-start">{faq.answer}</p>
-                  )}
+                  </div>
                 </li>
               ))}
             </ul>
