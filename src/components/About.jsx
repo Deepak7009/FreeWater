@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
-import WaterBoy from '../img/water1.webp'
-import WaterGirl from '../img/water2.webp'
+import Child1 from '../img/child1.jpg'
+import Child2 from '../img/child2.jpg'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import bottles from "../img/WaterBottle4.png";
@@ -52,7 +52,7 @@ function About() {
                     </div>
                     <div className="md:w-1/2 p-4" data-aos="fade-up">
                         <img
-                            src={WaterBoy}
+                            src={Child2}
                             alt="A child drinking water from a tap"
                             className="w-full max-w-[600px] rounded-3xl h-auto object-cover"
                         />
@@ -65,9 +65,9 @@ function About() {
 
                     <div className="md:w-1/2 p-4" data-aos="fade-right">
                         <img
-                            src={WaterGirl}
-                            alt="A child drinking water from a tap"
-                            className="w-full max-w-[600px] h-auto object-cover rounded-3xl shadow-lg"
+                            src={Child1}
+                            alt=""
+                            className="w-full max-w-[600px] h-[400px] object-cover rounded-lg md:rounded-3xl shadow-lg"
                         />
                     </div>
                     <div className="md:w-1/2 p-4 ml-5 max-w-[600px] " data-aos="fade-left">
