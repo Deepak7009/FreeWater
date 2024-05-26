@@ -16,7 +16,8 @@ function Subscribe() {
     }, []);
 
     const handleSubmit = async () => {
-        const customerData = {
+        const subscribeData
+         = {
             name: firstName,
             lastName,
             email,
@@ -24,7 +25,9 @@ function Subscribe() {
         };
 
         try {
-            const response = await axios.post('http://localhost:5000/subscribe', customerData);
+            const response = await axios.post('http://localhost:5000/subscribe', subscribeData
+                
+            );
 
             if (response.status === 201) {
                 alert('Customer added successfully!');
