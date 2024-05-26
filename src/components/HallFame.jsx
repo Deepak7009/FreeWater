@@ -33,7 +33,7 @@ const HallFame = () => {
   return (
     <div className="container mx-auto p-4">
       <div className="  p-4  my-12">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl  mb-2">Hall of Fame</h1>
+        <h1 className="text-3xl md:text-4xl lg:text-5xl  mb-2 font-serif">Hall of Fame</h1>
         <p className="text-lg md:text-xl lg:text-[20px] mt-4">
           Welcome to the FreeWater Hall of Fame, where we recognize the
           contributions of those who have made a meaningful impact on our

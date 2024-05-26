@@ -281,7 +281,7 @@ const GetQuote = () => {
           </div>
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-green-400 to-blue-500 hover:from-green-500 hover:to-blue-600 text-white font-bold py-3 px-6 text-lg rounded-md shadow-lg transform hover:scale-105 transition-transform duration-300"
+            className="w-full font-serif bg-gradient-to-r from-green-400 to-blue-500 hover:from-green-500 hover:to-blue-600 text-white font-bold py-3 px-6 text-lg rounded-md shadow-lg transform hover:scale-105 transition-transform duration-300"
           >
             Send
           </button>
