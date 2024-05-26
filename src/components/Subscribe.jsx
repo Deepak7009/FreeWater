@@ -11,7 +11,7 @@ function Subscribe() {
     }, []);
 
     return (
-        <div className="flex justify-center items-center min-h-screen bg-gray-100 overflow-hidden">
+        <div className="flex justify-center items-center min-h-screen bg-gray-100 overflow-hidden py-5">
             <form className="w-full max-w-[450px] bg-gray-50 p-8 shadow-lg rounded-lg" data-aos="flip-right">
                 <h2 className="text-2xl font-bold mb-6 text-center text-blue-500">Subscribe To Get Your FreeWater</h2>
                 <div className="mb-6">
