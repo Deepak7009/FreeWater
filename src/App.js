@@ -21,10 +21,16 @@ function App() {
         <Route path="/hall-of-fame" element={<HallFame />}></Route>
         <Route path="/faq" element={<Accordion />}></Route>
         <Route path="/advertise" element={<Advertise />}></Route>
+        <Route
+          path="/distribute"
+          element={
+            <>
+              <DistributeHome /> <DistributeSecond /> <DistributeInfo />
+            </>
+          }
+        ></Route>
       </Routes>
-      <DistributeHome />
-      <DistributeSecond />
-      <DistributeInfo/>
+
       <Footer />
     </>
   );
