@@ -30,7 +30,7 @@ const Advertise = () => {
           </div>
           <div className="w-full md:w-1/2 px-4 flex flex-col justify-center" data-aos="fade-left">
             <div className="max-w-xs md:max-w-none mx-auto">
-              <h1 className="text-2xl lg:text-[44px] font-bold leading-[1] mb-4">
+              <h1 className="text-2xl lg:text-[44px] font-bold leading-[1] mb-4 font-serif">
                 PUT YOUR BRAND IN <br />
                 EVERYONE’S HAND
               </h1>
@@ -38,7 +38,7 @@ const Advertise = () => {
                 Receive meaningful impressions and utilize the greatest brand
                 loyalty platform in the ad industry
               </p>
-              <button className="bg-black text-white py-2 px-6 rounded-lg hover:bg-gray-800 transition-colors duration-300 lg:text-[20px]">
+              <button className="bg-black font-serif text-white py-2 px-6 rounded-lg hover:bg-gray-800 transition-colors duration-300 lg:text-[20px]">
                 Get A Quote
               </button>
             </div>
@@ -91,7 +91,7 @@ const Advertise = () => {
               </div>
             </div>
             <div className="px-8">
-              <button className="bg-black text-white py-2 px-6 rounded-lg hover:bg-gray-800 transition-colors duration-300 mt-4 lg:text-[20px]">
+              <button className="bg-black font-serif text-white py-2 px-6 rounded-lg hover:bg-gray-800 transition-colors duration-300 mt-4 lg:text-[20px]">
                 Get A Quote
               </button>
             </div>
@@ -114,7 +114,7 @@ const Advertise = () => {
         <AdvertiseMid />
       </div>
       <div className="container mx-auto flex items-center justify-center p-4 md:p-8 lg:p-12">
-        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-[50px] xl:text-[55px] font-bold mb-4 leading-[2]">
+        <h1 className="text-xl font-serif sm:text-2xl md:text-3xl lg:text-[50px] xl:text-[55px] font-bold mb-4 leading-[2]">
           It's a mini billboard in your hands
         </h1>
       </div>

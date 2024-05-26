@@ -82,7 +82,7 @@ const GetQuote = () => {
   return (
     <div className="flex justify-center items-center min-h-screen py-8 px-4 bg-gray-100 mt-6">
       <div className="w-full max-w-3xl bg-white p-8 rounded-lg shadow-xl">
-        <h1 className="text-4xl font-bold mb-6 text-center text-teal-600">
+        <h1 className="text-4xl font-serif font-bold mb-6 text-center text-teal-600">
           Get a Quote
         </h1>
         <ToastContainer />

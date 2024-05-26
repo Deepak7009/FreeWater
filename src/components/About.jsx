@@ -14,17 +14,13 @@ function About() {
 
   return (
     <div className="overflow-hidden">
+
       <section>
         <div className="flex justify-center flex-col md:flex-row items-center pr-8">
-          <div
-            className="md:w-1/2 pl-4 py-5 flex justify-center"
-            data-aos="fade-right"
-          >
-            <img className="block mb-4" src={bottles} alt="Description" />
-          </div>
+        
           <div
             className="md:w-1/2 py-4 md:pr-4 ml-5 max-w-[600px]  flex justify-center "
-            data-aos="fade-up"
+            data-aos="fade-down"
           >
             <p className="mb-4 text-xl px-2">
               FreeWater is an innovative advertising platform that utilizes
@@ -36,39 +32,47 @@ function About() {
               the global water crisis permanently.
             </p>
           </div>
-        </div>
-      </section>
-
-      <section>
-        <div className="flex justify-center bg-gray-100 flex-col md:flex-row items-center p-8">
-          <div className="md:w-1/2 p-4 ml-5 max-w-[600px]" data-aos="fade-down">
-            <h2 className="text-2xl md:text-4xl font-bold mb-7">
-              We are partnered with WellAware
-            </h2>
-            <p className="mb-4 text-xl md:px-2">
-              We donate ten cents per beverage to WellAware, an Austin based
-              non-profit that builds water wells in East Africa. Every 150
-              FreeWaters donates enough money to provide one person with a safe
-              water source for the rest of their life.
-            </p>
-          </div>
           <div
-            className="md:w-1/2 p-4  rounded-3xl overflow-hidden zoom-container"
+            className="md:w-1/2 pl-4 py-5 flex justify-center"
             data-aos="fade-up"
           >
-            <img
-              src={Child2}
-              alt="A child drinking water from a tap"
-              className="w-full max-w-[600px] rounded-3xl h-auto object-cover zoom-image"
-            />
+            <img className="block mb-4" src={bottles} alt="Description" />
           </div>
         </div>
       </section>
 
       <section className="bg-gray-50 py-12">
-        <div className="flex justify-center flex-col md:flex-row items-center p-8">
+        <div className="flex justify-center flex-col md:flex-row items-center py-8">
           <div
-            className="md:w-1/2 p-4 rounded-3xl overflow-hidden zoom-container"
+            className="md:w-1/2 py-4 rounded-3xl overflow-hidden zoom-container"
+            data-aos="fade-right"
+          >
+            <img
+              src={Child2}
+              alt=""
+              className="w-full max-w-[600px] h-[400px] object-cover rounded-lg md:rounded-3xl shadow-lg zoom-image"
+            />
+          </div>
+          <div
+            className="md:w-1/2 py-4 ml-5 max-w-[600px] "
+            data-aos="fade-left"
+          >
+            <h2 className="text-2xl md:text-4xl font-bold mb-7">
+              We are partnered  <span className="block"> with WellAware</span>
+            </h2>
+            <p className="mb-4 text-xl md:px-2">
+              We donate ten cents per beverage to WellAware, an Austin based non-profit that builds water wells in East Africa. Every 150 FreeWaters donates enough money to provide one person with a safe water source for the rest of their life.
+            </p>
+
+          </div>
+          
+        </div>
+      </section>
+
+      <section className="bg-gray-50 py-12">
+        <div className="flex justify-center flex-col md:flex-row items-center py-8">
+          <div
+            className="md:w-1/2 py-4 rounded-3xl overflow-hidden zoom-container"
             data-aos="fade-right"
           >
             <img
@@ -78,7 +82,7 @@ function About() {
             />
           </div>
           <div
-            className="md:w-1/2 p-4 ml-5 max-w-[600px] "
+            className="md:w-1/2 py-4 ml-5 max-w-[600px] "
             data-aos="fade-left"
           >
             <h2 className="text-2xl md:text-4xl font-bold mb-7">
@@ -90,8 +94,7 @@ function About() {
               comprehensive water, sanitation, and hygiene programming to
               protect everyone’s long-term health.
             </p>
-            <div className="flex justify-center items-center">
-            </div>
+
           </div>
         </div>
       </section>
