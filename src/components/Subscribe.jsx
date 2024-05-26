@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import axios from 'axios';
 
 function Subscribe() {
     const [firstName, setFirstName] = useState('');
@@ -14,13 +15,35 @@ function Subscribe() {
         });
     }, []);
 
-    const handleSubmit = () => {
- 
+    const handleSubmit = async () => {
+        const customerData = {
+            name: firstName,
+            lastName,
+            email,
+            city
+        };
+
+        try {
+            const response = await axios.post('http://localhost:5000/subscribe', customerData);
+
+            if (response.status === 201) {
+                alert('Customer added successfully!');
+                setFirstName('');
+                setLastName('');
+                setEmail('');
+                setCity('');
+            } else {
+                alert('Failed to add customer. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('An error occurred. Please try again.');
+        }
     };
 
     return (
         <div className="flex justify-center items-center min-h-screen bg-gray-100 overflow-hidden py-5">
-            <form className="w-full max-w-[450px] bg-gray-50 p-8 shadow-lg rounded-lg" data-aos="flip-right">
+            <form className="w-full max-w-[450px] bg-gray-50 p-8 shadow-lg rounded-lg" data-aos="flip-right" onSubmit={(e) => e.preventDefault()}>
                 <h2 className="text-2xl font-bold mb-6 text-center text-blue-500">Subscribe To Get Your FreeWater</h2>
                 <div className="mb-6">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="first-name">
