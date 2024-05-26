@@ -4,10 +4,13 @@ import 'aos/dist/aos.css';
 import axios from 'axios';
 
 function Subscribe() {
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
-    const [email, setEmail] = useState('');
-    const [city, setCity] = useState('');
+    const [formData, setFormData] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        city: ''
+    });
+    const [emailError, setEmailError] = useState('');
 
     useEffect(() => {
         AOS.init({
@@ -15,26 +18,39 @@ function Subscribe() {
         });
     }, []);
 
+    const validateEmail = (email) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    };
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value
+        });
+    };
+
     const handleSubmit = async () => {
-        const subscribeData
-         = {
-            name: firstName,
-            lastName,
-            email,
-            city
-        };
+        const { email } = formData;
+
+        if (!validateEmail(email)) {
+            setEmailError('Please enter a valid email address.');
+            return;
+        }
+        setEmailError('');
 
         try {
-            const response = await axios.post('http://localhost:5000/subscribe', subscribeData
-                
-            );
+            const response = await axios.post('http://localhost:5000/subscribe', formData);
 
             if (response.status === 201) {
                 alert('Customer added successfully!');
-                setFirstName('');
-                setLastName('');
-                setEmail('');
-                setCity('');
+                setFormData({
+                    firstName: '',
+                    lastName: '',
+                    email: '',
+                    city: ''
+                });
             } else {
                 alert('Failed to add customer. Please try again.');
             }
@@ -50,54 +66,59 @@ function Subscribe() {
                 <h2 className="text-2xl font-bold mb-6 text-center text-blue-500">Subscribe To Get Your FreeWater</h2>
                 <div className="mb-6">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="first-name">
-                        First name: *
+                        First name: <span className='text-red-500'>*</span>
                     </label>
                     <input
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="first-name"
                         type="text"
                         placeholder="Enter your Name"
-                        value={firstName}
-                        onChange={(e) => setFirstName(e.target.value)}
+                        name="firstName"
+                        value={formData.firstName}
+                        onChange={handleChange}
                     />
                 </div>
                 <div className="mb-6">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="last-name">
-                        Last name: *
+                        Last name: <span className='text-red-500'>*</span>
                     </label>
                     <input
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="last-name"
                         type="text"
                         placeholder="Enter your Last name"
-                        value={lastName}
-                        onChange={(e) => setLastName(e.target.value)}
+                        name="lastName"
+                        value={formData.lastName}
+                        onChange={handleChange}
                     />
                 </div>
                 <div className="mb-6">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-                        Email: *
+                        Email: <span className='text-red-500'>*</span>
                     </label>
                     <input
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="email"
                         type="email"
                         placeholder="Enter your Email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
                     />
+                    {emailError && <p className="text-red-500 text-xs italic">{emailError}</p>}
                 </div>
                 <div className="mb-6">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="city">
-                        City: *
+                        City: <span className='text-red-500'>*</span>
                     </label>
                     <input
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="city"
                         type="text"
                         placeholder="Enter City Name"
-                        value={city}
-                        onChange={(e) => setCity(e.target.value)}
+                        name="city"
+                        value={formData.city}
+                        onChange={handleChange}
                     />
                 </div>
                 <div className="flex items-center justify-center">
