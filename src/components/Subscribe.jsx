@@ -1,14 +1,22 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 function Subscribe() {
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [email, setEmail] = useState('');
+    const [city, setCity] = useState('');
 
     useEffect(() => {
         AOS.init({
             duration: 2000,
         });
     }, []);
+
+    const handleSubmit = () => {
+ 
+    };
 
     return (
         <div className="flex justify-center items-center min-h-screen bg-gray-100 overflow-hidden py-5">
@@ -22,7 +30,9 @@ function Subscribe() {
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="first-name"
                         type="text"
-                        placeholder=" Enter your Name"
+                        placeholder="Enter your Name"
+                        value={firstName}
+                        onChange={(e) => setFirstName(e.target.value)}
                     />
                 </div>
                 <div className="mb-6">
@@ -34,6 +44,8 @@ function Subscribe() {
                         id="last-name"
                         type="text"
                         placeholder="Enter your Last name"
+                        value={lastName}
+                        onChange={(e) => setLastName(e.target.value)}
                     />
                 </div>
                 <div className="mb-6">
@@ -45,6 +57,8 @@ function Subscribe() {
                         id="email"
                         type="email"
                         placeholder="Enter your Email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                     />
                 </div>
                 <div className="mb-6">
@@ -56,17 +70,18 @@ function Subscribe() {
                         id="city"
                         type="text"
                         placeholder="Enter City Name"
+                        value={city}
+                        onChange={(e) => setCity(e.target.value)}
                     />
                 </div>
                 <div className="flex items-center justify-center">
                     <button
                         className="bg-blue-500 text-white text-lg font-bold py-2 px-8 rounded-full focus:outline-none focus:shadow-outline transition duration-400 bg-slide-hover"
                         type="button"
+                        onClick={handleSubmit}
                     >
                         Send
                     </button>
-
-
                 </div>
             </form>
         </div>
