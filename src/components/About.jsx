@@ -41,8 +41,8 @@ function About() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-12">
-        <div className="flex justify-center flex-col md:flex-row items-center py-8">
+      <section className="md:bg-gray-50 md:py-12">
+        <div className="flex justify-center flex-col md:flex-row items-center md:py-8">
           <div
             className="md:w-1/2 py-4 rounded-3xl overflow-hidden zoom-container"
             data-aos="fade-right"
@@ -50,7 +50,7 @@ function About() {
             <img
               src={Child2}
               alt=""
-              className="w-full max-w-[600px] h-[400px] object-cover rounded-lg md:rounded-3xl shadow-lg zoom-image"
+              className="w-full max-w-[600px] h-[400px] md:object-cover  md:rounded-3xl md:shadow-lg zoom-image"
             />
           </div>
           <div
@@ -69,7 +69,7 @@ function About() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-12">
+      <section className="md:bg-gray-50 md:py-12">
         <div className="flex justify-center flex-col md:flex-row items-center py-8">
           <div
             className="md:w-1/2 py-4 rounded-3xl overflow-hidden zoom-container"
@@ -78,7 +78,7 @@ function About() {
             <img
               src={Child1}
               alt=""
-              className="w-full max-w-[600px] h-[400px] object-cover rounded-lg md:rounded-3xl shadow-lg zoom-image"
+              className="w-full md:max-w-[600px] h-[400px] object-cover md:rounded-3xl md:shadow-lg zoom-image"
             />
           </div>
           <div
@@ -88,7 +88,7 @@ function About() {
             <h2 className="text-2xl md:text-4xl font-bold mb-7">
               Charity : Water
             </h2>
-            <p className="mb-4 text-xl md:px-2">
+            <p className="md:mb-4 text-xl md:px-2">
               They work exclusively with local partners who build sustainable,
               community-owned water projects. Their partners also facilitate
               comprehensive water, sanitation, and hygiene programming to

@@ -70,10 +70,10 @@ function Subscribe() {
     };
 
     return (
-        <div className="flex justify-around items-center min-h-screen overflow-hidden py-5">
+        <div className="md:flex justify-around items-center min-h-screen overflow-hidden py-5">
             <ToastContainer />
             <div className=' flex justify-center items-center'>
-                <form className="w-full max-w-[450px] bg-gray-50 p-8 shadow-lg rounded-lg" data-aos="flip-right" onSubmit={(e) => e.preventDefault()}>
+                <form className="w-full max-w-[450px] bg-gray-50 p-4 md:p-8 shadow-lg rounded-lg" data-aos="flip-right" onSubmit={(e) => e.preventDefault()}>
                     <h2 className="text-2xl font-bold mb-6 text-center text-blue-500 font-serif">Subscribe To Get Your FreeWater</h2>
                     <div className="mb-6">
                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="first-name">

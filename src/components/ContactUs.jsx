@@ -105,8 +105,8 @@ function ContactUs() {
 
     return (
         <>
-            <div className="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 py-12 bg-gray-100 overflow-hidden">
-                <div className="flex justify-center items-center min-h-screen py-8 px-4 bg-gray-100 mt-6">
+            <div className="min-h-screen flex flex-col md:flex-row items-center justify-center md:px-6 md:py-12 md:bg-gray-100 overflow-hidden">
+                <div className="flex justify-center items-center min-h-screen md:py-8 md:px-4 md:bg-gray-100 md:mt-6">
                     <div className="w-full max-w-3xl bg-white p-8 rounded-lg shadow-xl">
                         <h1 className="text-4xl font-bold mb-6 text-center text-teal-600 font-serif">
                             Contact Us
