@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import axios from 'axios';
+import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -34,7 +34,7 @@ function Subscribe() {
     };
 
     const handleSubmit = async () => {
-        const { email } = formData;
+        const { firstName, lastName, email, city } = formData;
 
         if (!validateEmail(email)) {
             setEmailError('Please enter a valid email address.');
@@ -42,20 +42,28 @@ function Subscribe() {
         }
         setEmailError('');
 
-        try {
-            const response = await axios.post('http://localhost:5000/subscribe', formData);
+        const templateParams = {
+            firstName,
+            lastName,
+            email,
+            city,
+            adminEmail: 'vinunarwal3@gmail.com'
+        };
 
-            if (response.status === 201) {
-                toast.success('You have Subscribed successfully!');
-                setFormData({
-                    firstName: '',
-                    lastName: '',
-                    email: '',
-                    city: ''
-                });
-            } else {
-                toast.error('Failed to add customer. Please try again.');
-            }
+        try {
+            await emailjs.send(
+                'service_kz7aisw',  // EmailJS service ID
+                'template_m0rydoh',  // EmailJS template ID
+                templateParams,
+                'sRzkVggIpZqCpMPKX'  // EmailJS user ID
+            );
+            toast.success('You have subscribed successfully!');
+            setFormData({
+                firstName: '',
+                lastName: '',
+                email: '',
+                city: ''
+            });
         } catch (error) {
             console.error('Error:', error);
             toast.error('An error occurred. Please try again.');
