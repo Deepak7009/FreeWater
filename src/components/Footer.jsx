@@ -6,13 +6,13 @@ const Footer = () => {
             <div className="container-fluid mx-auto flex flex-col md:flex-row justify-around items-center space-y-6 md:space-y-0">
                 <div>
                     <div className="text-center md:text-left">
-                        <h2 className="text-2xl font-bold font-serif">Because water should be free</h2>
-                        <p className="mt-2">Help us spread the word and share our movement with your friends and family</p>
-                        <button className="my-4 font-serif bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-blue-600 hover:text-xl">
+                        <h2 className="text-3xl font-bold font-serif">Because water should be free</h2>
+                        <p className="mt-2 text-xl">Help us spread the word and share our movement with your friends and family</p>
+                        <button className="my-4 font-serif text-xl bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-blue-600 hover:text-xl">
                             Contact Us
                         </button>
                     </div>
-                    <div className="text-center md:text-left space-y-2">
+                    <div className="text-center md:text-left space-y-2 text-xl">
                         <div className="flex justify-center md:justify-start space-x-4">
                             <a href="/" className="hover:text-xl hover:text-teal-900">Projects</a>
                         </div>
@@ -52,7 +52,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="text-center mt-6 text-gray-500 text-sm">
+            <div className="text-center mt-6 text-gray-500 text-lg">
                 © 2023 Copyright FreeWater All Rights Reserved
             </div>
         </footer>
