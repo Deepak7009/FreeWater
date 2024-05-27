@@ -1,5 +1,5 @@
 import React from "react";
-import bottle from "../images/bottle1.webp";
+import bottle from "../images/bottle3.webp";
 const DistributeSecond = () => {
   return (
     <section className="bg-white py-[60px]">

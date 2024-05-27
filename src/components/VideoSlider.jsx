@@ -2,8 +2,8 @@ import React from "react";
 import Slider from "react-slick";
 import video1 from "../videos/video1.mp4";
 import video2 from "../videos/video2.mp4";
-import bottle1 from "../images/bottle1.webp";
-import bottle2 from "../images/bottle2.webp";
+import bottle1 from "../images/Bottle1.webp";
+import bottle2 from "../images/btl.webp";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

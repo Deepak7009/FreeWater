@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import Child1 from "../img/child1.jpg";
-import Child2 from "../img/child2.jpg";
+import Child1 from "../images/child1.jpg";
+import Child2 from "../images/child5.webp";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import bottles from "../img/WaterBottle4.png";
+import bottles from "../images/WaterBottle4.png";
 
 function About() {
   useEffect(() => {

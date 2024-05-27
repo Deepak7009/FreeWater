@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom';
-import Bottle from '../img/WaterBottles3.png'
+import Bottle from '../images/WaterBottles3.png'
 
 function Hero() {
     useEffect(() => {
