@@ -69,7 +69,7 @@ function About() {
         </div>
       </section>
 
-      <section className="md:bg-gray-50 md:py-12">
+      <section className="md:bg-gray-50 py-12">
         <div className="flex justify-center flex-col md:flex-row items-center py-8">
           <div
             className="md:w-1/2 py-4 rounded-3xl overflow-hidden zoom-container"
@@ -78,7 +78,7 @@ function About() {
             <img
               src={Child1}
               alt=""
-              className="w-full md:max-w-[600px] h-[400px] object-cover md:rounded-3xl md:shadow-lg zoom-image"
+              className="w-full max-w-[600px] h-[400px] object-cover md:rounded-3xl shadow-lg zoom-image"
             />
           </div>
           <div
