@@ -71,14 +71,14 @@ const Navbar = () => {
                 Distribute
               </Link>
             </li>
-            <li>
+            {/*<li>
               <Link
                 to="/hall-of-fame"
                 className={linkClasses("/hall-of-fame")}
                 onClick={() => setIsOpen(false)}>
                 Hall of Fame
               </Link>
-            </li>
+            </li>*/}
             <li>
               <Link
                 to="/faq"

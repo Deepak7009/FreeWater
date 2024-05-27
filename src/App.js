@@ -4,7 +4,7 @@ import Advertise from "./components/Advertise";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Accordion from "./components/Accordion";
-import HallFame from "./components/HallFame";
+//import HallFame from "./components/HallFame";
 import ContactUs from "./components/ContactUs";
 import Footer from "./components/Footer";
 import DistributeHome from "./components/DistributeHome";
@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/contact-us" element={<ContactUs />}></Route>
-        <Route path="/hall-of-fame" element={<HallFame />}></Route>
+        {/*<Route path="/hall-of-fame" element={<HallFame />}></Route>*/}
         <Route path="/faq" element={<Accordion />}></Route>
         <Route path="/advertise" element={<Advertise />}></Route>
         <Route
