@@ -43,3 +43,22 @@
   background-size: cover;
   background-position: center;
 }
+
+@media only screen and (max-width: 600px) {
+  .subscribe{
+    display: block;
+  }
+  .quote{
+    background-color: white;
+    padding: 0px;
+  }
+  .contact{
+    background-color: white;
+    padding: 0px;
+  }
+  .distribute_form{
+    background-color: white;
+    padding: 0px;
+    margin-top: 0px;
+  }
+}

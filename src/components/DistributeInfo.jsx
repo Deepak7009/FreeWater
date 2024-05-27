@@ -98,13 +98,13 @@ const DistributeInfo = () => {
 };
 
   return (
-    <div className="flex justify-center items-center min-h-screen md:py-8 md:px-4 md:bg-gray-100 md:mt-6 mb-4">
-      <div className="w-full max-w-3xl bg-white px-4 md:p-8  rounded-lg shadow-xl">
+    <div className="distribute_form flex justify-center items-center min-h-screen py-8 px-4 bg-gray-100 mt-6">
+      <div className="w-full max-w-3xl bg-white p-8 rounded-lg shadow-xl">
         <h1 className="text-4xl font-bold mb-6 text-center text-teal-600 font-serif">
         Distribute FreeWater
         </h1>
         <ToastContainer />
-        <form className="space-y-6 mb-4" onSubmit={handleSubmit}>
+        <form className="space-y-6" onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label
