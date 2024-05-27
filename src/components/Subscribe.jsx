@@ -43,11 +43,9 @@ function Subscribe() {
         setEmailError('');
 
         const templateParams = {
-            firstName,
-            lastName,
+            name: `${firstName} ${lastName}`,
             email,
             city,
-            adminEmail: 'vinunarwal3@gmail.com'
         };
 
         try {

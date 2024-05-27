@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import emailjs from 'emailjs-com';
 
 const DistributeInfo = () => {
   const [formData, setFormData] = useState({
@@ -47,37 +47,55 @@ const DistributeInfo = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const { firstName, lastName, email, number, company, businessType, advertising, budget, message } = formData;
+
     const validationErrors = validate();
     if (Object.keys(validationErrors).length === 0) {
-      try {
-        const response = await axios.post(
-          "http://localhost:5000/contact",
-          formData
-        );
-        if (response.status === 201) {
-          toast.success('Contact Details added successfully!');
-          setFormData({
-            firstName: "",
-            lastName: "",
-            email: "",
-            number: "",
-            company: "",
-            businessType: "",
-            advertising: "",
-            budget: "",
-            message: "",
-            recaptcha: false,
-          });
-        } else {
-          toast.error('Failed to add customer. Please try again.');        }
-      } catch (error) {
-        console.error("Error:", error);
-        toast.error('An error occurred. Please try again.');
-      }
+        try {
+            const templateParams = {
+                name: `${firstName} ${lastName}`,
+                email,
+                number,
+                company,
+                businessType,
+                advertising,
+                budget,
+                message,
+            };
+
+            const result = await emailjs.send(
+                'service_kz7aisw',
+                'template_45no4uh',
+                templateParams,
+                'sRzkVggIpZqCpMPKX'
+            );
+
+            if (result.status === 200) {
+                toast.success('Email sent successfully!');
+                setFormData({
+                    firstName: "",
+                    lastName: "",
+                    email: "",
+                    number: "",
+                    company: "",
+                    businessType: "",
+                    advertising: "",
+                    budget: "",
+                    message: "",
+                    recaptcha: false,
+                });
+            } else {
+                toast.error('Failed to send email. Please try again.');
+            }
+        } catch (error) {
+            console.error("Error:", error);
+            toast.error('An error occurred. Please try again.');
+        }
     } else {
-      setErrors(validationErrors);
+        setErrors(validationErrors);
     }
-  };
+};
 
   return (
     <div className="flex justify-center items-center min-h-screen py-8 px-4 bg-gray-100 mt-6">

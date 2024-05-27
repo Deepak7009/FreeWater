@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import WaterBottle from '../img/WaterBottle4.png';
-import axios from "axios";
+import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function ContactUs() {
-
     useEffect(() => {
         AOS.init({
             duration: 2000,
@@ -44,28 +43,42 @@ function ContactUs() {
         if (!formData.email) newErrors.email = "Email is required";
         if (!formData.number) newErrors.number = "Phone number is required";
         if (!formData.company) newErrors.company = "Company name is required";
-        if (!formData.businessType)
-            newErrors.businessType = "Business type is required";
-        if (!formData.advertising)
-            newErrors.advertising = "Advertising info is required";
+        if (!formData.businessType) newErrors.businessType = "Business type is required";
+        if (!formData.advertising) newErrors.advertising = "Advertising info is required";
         if (!formData.budget) newErrors.budget = "Budget is required";
         if (!formData.message) newErrors.message = "Message is required";
-        if (!formData.recaptcha)
-            newErrors.recaptcha = "Please confirm you are not a robot";
+        if (!formData.recaptcha) newErrors.recaptcha = "Please confirm you are not a robot";
         return newErrors;
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        const { firstName, lastName, email, number, company, businessType, advertising, budget, message } = formData;
+
         const validationErrors = validate();
         if (Object.keys(validationErrors).length === 0) {
             try {
-                const response = await axios.post(
-                    "http://localhost:5000/contact",
-                    formData
+                const templateParams = {
+                    name: `${firstName} ${lastName}`,
+                    email,
+                    number,
+                    company,
+                    businessType,
+                    advertising,
+                    budget,
+                    message,
+                };
+
+                const result = await emailjs.send(
+                    'service_kz7aisw',
+                    'template_45no4uh',
+                    templateParams,
+                    'sRzkVggIpZqCpMPKX'
                 );
-                if (response.status === 201) {
-                    toast.success('Contact Details added successfully!');
+
+                if (result.status === 200) {
+                    toast.success('Email sent successfully!');
                     setFormData({
                         firstName: "",
                         lastName: "",
@@ -79,7 +92,7 @@ function ContactUs() {
                         recaptcha: false,
                     });
                 } else {
-                    toast.error('Failed to add customer. Please try again.');
+                    toast.error('Failed to send email. Please try again.');
                 }
             } catch (error) {
                 console.error("Error:", error);
